@@ -1,3 +1,8 @@
+function OrderTotal(pizzaCount, totalPrice) {
+  this.pizzaCount = pizzaCount;
+  this.totalPrice = totalPrice;
+}
+
 function Pizza(size, toppings, delivery) {
   this.size = size;
   this.toppings = toppings;
@@ -27,6 +32,7 @@ let order = function (pizza) {
 }
 
 
+
 //User Interface Logic
 $(document).ready(function () {
   $("#home-buttons").submit(function (event) {
@@ -47,7 +53,12 @@ $(document).ready(function () {
     let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
     let orderPrice = order(newPizza);
     $("#menu").hide();
-    $(".confirmation").show();
-
+    $("newPizza").show();
+    $(".confirmation").show().text("Your Total: $" + orderPrice);
+    let pizzaCount = 0;
+    let totalPrice = orderPrice;
+    let newOrder = new OrderTotal(pizzaCount, totalPrice);
+    console.log(newPizza);
+    console.log(newOrder);
     });
 });
