@@ -11,15 +11,15 @@
 </head>
 
 <body>
-  
+
   <h1>Andy's Super Thin-Crust Pizza</h1>
   <h2>Crust so thin you'll say <strong><em>"Hey! Where's The Crust???"</em></strong></h2>
-  <form class="home-buttons">
+  <form id="home-buttons">
     <button id="btn-signature" type="submit">Signature Pies</button>
     <button id="btn-custom" type="submit">Build Your Own</button>
   </form>
   <div class="order-custom">
-    <form>
+    <form id="menu">
       <div class="form">
         <p>Size</p>
         <div class="size">
@@ -79,10 +79,11 @@
       <button id="btn" type="submit">Add To Order</button>
     </form>
   </div>
-  <div id="total">
-  </div>
-  <div id="continue-shopping">
-    <button id="btn-continue" type="submit">Add Another Item</button>
+  <div class="confirmation">
+    <div id="total">
+      <p>Your Total: </p>
+    </div>
+      <button id="btn-continue" type="submit">Add Another Item</button>
   </div>
 </body>
 

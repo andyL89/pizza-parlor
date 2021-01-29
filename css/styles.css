@@ -26,10 +26,6 @@ h2 {
   display: none;
 }
 
-#continue-shopping {
-  display: none;
-}
-
-#total {
+.confirmation {
   display: none;
 }

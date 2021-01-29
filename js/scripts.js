@@ -4,7 +4,6 @@ function Pizza(size, toppings, delivery) {
   this.delivery = delivery;
 }
 
-
 let order = function (pizza) {
   let size = pizza.size;
   let toppings = pizza.toppings;
@@ -30,13 +29,13 @@ let order = function (pizza) {
 
 //User Interface Logic
 $(document).ready(function () {
-  $(".home-buttons").submit(function (event) {
+  $("#home-buttons").submit(function (event) {
     event.preventDefault();
-    $(".home-buttons").hide();
+    $("#home-buttons").hide();
     $("h2").hide();
     $(".order-custom").show();
   });
-  $("form").submit(function (event) {
+  $("#menu").submit(function (event) {
     event.preventDefault();
     const inputtedSize = $("input:radio[name=size]:checked").val();
     let chosenToppings = [];
@@ -44,10 +43,11 @@ $(document).ready(function () {
       const inputtedToppings = $(this).val();
       chosenToppings.push(inputtedToppings);
     });
-      const inputtedDelivery = $("input:radio[name=delivery]:checked").val();
-      let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
-      let orderPrice = order(newPizza);
-      $("#total").show().text("Your Total: " + orderPrice);
-      console.log(newPizza);
+    const inputtedDelivery = $("input:radio[name=delivery]:checked").val();
+    let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
+    let orderPrice = order(newPizza);
+    $("#menu").hide();
+    $(".confirmation").show();
+
     });
 });
