@@ -26,6 +26,13 @@ h2 {
   display: none;
 }
 
-.confirmation {
+#total {
+  display:none;
+  margin-top: 100px;
+  font-size: 250%;
+}
+
+#add-more {
   display: none;
+  margin-top: 50px;
 }

@@ -35,7 +35,7 @@ let order = function (pizza) {
 
 //User Interface Logic
 $(document).ready(function () {
-  $("#home-buttons").submit(function (event) {
+  $("#home-buttons").click(function (event) {
     event.preventDefault();
     $("#home-buttons").hide();
     $("h2").hide();
@@ -53,11 +53,17 @@ $(document).ready(function () {
     let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
     let orderPrice = order(newPizza);
     $("#menu").hide();
-    $("newPizza").show();
-    $(".confirmation").show().text("Your Total: $" + orderPrice);
-    let pizzaCount = 0;
+    $("#total").show().text("Your total: $" + orderPrice);
+    $("#add-more").show();
+
+    let itemCount = 0;
     let totalPrice = orderPrice;
-    let newOrder = new OrderTotal(pizzaCount, totalPrice);
+    let newOrder = new OrderTotal(itemCount, totalPrice);
+    $("#add-more").click(function () {
+      $("add-more").hide();
+      $("#home-buttons").show();
+    });
+
     console.log(newPizza);
     console.log(newOrder);
     });
