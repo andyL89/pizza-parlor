@@ -1,5 +1,5 @@
-function OrderTotal(pizzaCount, totalPrice) {
-  this.pizzaCount = pizzaCount;
+function OrderTotal(itemCount, totalPrice) {
+  this.itemCount = itemCount;
   this.totalPrice = totalPrice;
 }
 
@@ -10,7 +10,7 @@ function Pizza(size, toppings, delivery) {
 }
 
 Pizza.prototype.pizzaOrdered = function() {
-  return this.size + " " + "Pizza" + " " + "w/" + " " + this.toppings;
+  return this.size + " " + "pizza" + " " + "w/" + " " + this.toppings;
 }
 
 let order = function (pizza) {
@@ -39,7 +39,7 @@ let order = function (pizza) {
 
 //User Interface Logic
 $(document).ready(function () {
-  $("#home-buttons").click(function (event) {
+  $("#btn-custom").click(function (event) {
     event.preventDefault();
     $("#home-buttons").hide();
     $("h2").hide();
@@ -57,7 +57,8 @@ $(document).ready(function () {
     let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
     let orderPrice = order(newPizza);
     $("#menu").hide();
-    $("#total").show().text("Your total: $" + orderPrice);
+    $("#total").show().text("Your Total: $" + orderPrice);
+    $("#current-order").show().text(newPizza.pizzaOrdered());
     $("#add-more").show();
 
     let itemCount = 0;
@@ -67,7 +68,10 @@ $(document).ready(function () {
       $("#add-more").hide();
       $("#home-buttons").show();
     });
+    $("")
 
+
+    console.log(newPizza);
     console.log(newPizza.pizzaOrdered());
     console.log(newOrder);
     });

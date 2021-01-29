@@ -12,10 +12,20 @@ h1 {
   font-size: 400%;
   margin-top: 20px;
   margin-bottom: 50px;
+  font-family: cursive;
 }
 
-h2 {
+h2.double {
   margin-bottom: 100px;
+  font-size: 150%;
+  font-family: Times;
+  width: 570px;
+  padding: 8px;
+  border: 3px solid olivedrab;
+  border-style: double;
+  border-radius: 50px;
+  margin: auto;
+  margin-bottom: 50px;
 }
 
 .meat, .veggies {
