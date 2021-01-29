@@ -1,18 +1,45 @@
-body {
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("https://galatislv.files.wordpress.com/2015/02/tablecloth.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 1000px;
+  padding: 20px;
   text-align: center;
 }
 
-p {
+/* p {
   margin-top: 30px;
   font-size: larger;
   text-decoration: underline;
-}
+} */
 
 h1 {
   font-size: 400%;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 50px;
   font-family: cursive;
+  background-color: rgba(255, 255, 255, 0.824);
+  border-radius: 50px;
 }
 
 h2.double {
@@ -21,7 +48,8 @@ h2.double {
   font-family: Times;
   width: 570px;
   padding: 8px;
-  border: 3px solid olivedrab;
+  border: 3px solid rgb(179, 0, 0);
+  background-color: rgba(255, 255, 255, 0.838);
   border-style: double;
   border-radius: 50px;
   margin: auto;
