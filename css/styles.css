@@ -22,6 +22,14 @@ h2 {
   display: inline-block;
 }
 
-/* .order {
+.order-custom {
   display: none;
-} */
+}
+
+#continue-shopping {
+  display: none;
+}
+
+#total {
+  display: none;
+}

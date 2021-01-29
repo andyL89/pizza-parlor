@@ -30,7 +30,12 @@ let order = function (pizza) {
 
 //User Interface Logic
 $(document).ready(function () {
-  $("#btn-custom")
+  $(".home-buttons").submit(function (event) {
+    event.preventDefault();
+    $(".home-buttons").hide();
+    $("h2").hide();
+    $(".order-custom").show();
+  });
   $("form").submit(function (event) {
     event.preventDefault();
     const inputtedSize = $("input:radio[name=size]:checked").val();
@@ -42,8 +47,7 @@ $(document).ready(function () {
       const inputtedDelivery = $("input:radio[name=delivery]:checked").val();
       let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
       let orderPrice = order(newPizza);
-      $("")
       $("#total").show().text("Your Total: " + orderPrice);
       console.log(newPizza);
-    })
+    });
 });
