@@ -9,6 +9,10 @@ function Pizza(size, toppings, delivery) {
   this.delivery = delivery;
 }
 
+Pizza.prototype.pizzaOrdered = function() {
+  return this.size + " " + "Pizza" + " " + "w/" + " " + this.toppings;
+}
+
 let order = function (pizza) {
   let size = pizza.size;
   let toppings = pizza.toppings;
@@ -59,12 +63,12 @@ $(document).ready(function () {
     let itemCount = 0;
     let totalPrice = orderPrice;
     let newOrder = new OrderTotal(itemCount, totalPrice);
-    $("#add-more").click(function () {
-      $("add-more").hide();
+    $("#btn-continue").click(function () {
+      $("#add-more").hide();
       $("#home-buttons").show();
     });
 
-    console.log(newPizza);
+    console.log(newPizza.pizzaOrdered());
     console.log(newOrder);
     });
 });
