@@ -8,6 +8,16 @@ p {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 400%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 100px;
+}
+
 .meat, .veggies {
   display: inline-block;
 }
