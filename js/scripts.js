@@ -12,17 +12,17 @@ let order = function (pizza) {
   let orderPrice = 0;
 
   if (size === "small") {
-    orderPrice = orderPrice + 10;
-  } else if (size === "medium") {
-    orderPrice = orderPrice + 13;
-  } else if (size === "large") {
-    orderPrice = orderPrice + 15;
-  } else if (size === "colossal") {
-    orderPrice = orderPrice + 17;
-  } else if (delivery === "delivery")
+    orderPrice = orderPrice + 10 + (toppings.length * 2);
+  } if (size === "medium") {
+    orderPrice = orderPrice + 13 + (toppings.length * 2);
+  } if (size === "large") {
+    orderPrice = orderPrice + 15 + (toppings.length * 2);
+  } if (size === "colossal") {
+    orderPrice = orderPrice + 18 + (toppings.length * 2);
+  } if (delivery === "delivery")
     orderPrice = orderPrice + 3;
   else {
-    orderPrice = orderPrice + toppings;
+    orderPrice = orderPrice;
   }
   return orderPrice;
 }
