@@ -20,13 +20,40 @@
       <button id="btn-signature" type="click">Signature Pies</button>
       <button id="btn-custom" type="click">Build Your Own</button>
     </form>
+    <div class="order-signature">
+      <p>All signature pies are size large with no substitutions.</p>
+      <form id="menu-signature">
+        <div class="pies">
+          <label>
+            <input type="radio" name="pies" value="3cheese" required/>
+            Three Cheese.........$17
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="pies" value="veggie" />
+            Veggie Supreme....$18
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="pies" value="bbq-chicken" />
+            BBQ Chicken........$19
+          </label>
+          <br>
+          <label>
+            <input type="radio" name="pies" value="meat-lovers" />
+            Meat-Lovers..........$21
+          </label>
+        </div>
+        <button id="btn2" type="submit">Add To Order</button>
+      </form>
+    </div>
     <div class="order-custom">
-      <form id="menu">
+      <form id="menu-custom">
         <div class="form">
           <p>Size</p>
           <div class="size">
             <label>
-              <input type="radio" name="size" value="small" />
+              <input type="radio" name="size" value="small" required/>
               Small........$10
             </label>
             <br>
@@ -53,7 +80,7 @@
               <input type="checkbox" name="toppings" value=" sausage"> Sausage<br>
               <input type="checkbox" name="toppings" value=" chicken"> Chicken<br>
               <input type="checkbox" name="toppings" value=" canadian-bacon"> Canadian Bacon<br>
-              <input type="checkbox" name="toppings" value=" bacon"> Bacon<br>
+              <input type="checkbox" name="toppings" value=" anchovies"> Anchovies<br>
             </div>
             <div class="veggies">
               <input type="checkbox" name="toppings" value=" olives"> Olives<br>
@@ -67,7 +94,7 @@
 
           <p>Pick-up or Delivery</p>
           <label>
-            <input type="radio" name="delivery" value="pick-up" />
+            <input type="radio" name="delivery" value="pick-up" required/>
             Pick-Up
           </label>
           <br>

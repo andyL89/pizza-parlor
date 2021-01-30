@@ -35,7 +35,6 @@ let order = function (pizza) {
 }
 
 
-
 //User Interface Logic
 $(document).ready(function () {
   $("#btn-custom").click(function (event) {
@@ -44,7 +43,15 @@ $(document).ready(function () {
     $("h2").hide();
     $(".order-custom").show();
   });
-  $("#menu").submit(function (event) {
+
+  $("#btn-signature").click(function (event) {
+    event.preventDefault();
+    $("#home-buttons").hide();
+    $("h2").hide();
+    $(".order-signature").show();
+  });
+
+  $("#menu-custom").submit(function (event) {
     event.preventDefault();
     const inputtedSize = $("input:radio[name=size]:checked").val();
     let chosenToppings = [];
@@ -55,22 +62,24 @@ $(document).ready(function () {
     const inputtedDelivery = $("input:radio[name=delivery]:checked").val();
     let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
     let orderPrice = order(newPizza);
-    $("#menu").hide();
+    $("#menu-custom").hide();
     $(".confirmation").show();
     $("#total").show().text("Your Total: $" + orderPrice);
     $("#current-order").show().text(newPizza.pizzaOrdered());
     $("#add-more").show();
 
     let totalPrice = orderPrice;
-    let newOrder = new OrderTotal(itemCount, totalPrice);
+    let newOrder = new OrderTotal(totalPrice);
     $("#btn-continue").click(function () {
       $("#add-more").hide();
       $("#home-buttons").show();
     });
-    
-    $("btn-custom").click(function () {
+
+    $("#btn-custom").click(function () {
       $(".order-custom").show();
-    })
+    });
+
+    
 
     console.log(newPizza);
     console.log(newPizza.pizzaOrdered());

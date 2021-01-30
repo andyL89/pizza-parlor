@@ -1,9 +1,9 @@
 ## Pizza Parlor
-#### **
+#### Object Oriented JavaScript Project: A webpage that allows users to order a pizza.
 ***By Andrew Lawson © 2021***
 
 ## *Description:*
-
+Users can order a pizza by choosing the size, toppings, and delivery options and will receive a total price once submitted. This project's code uses concepts including object constructors, prototypes, forms, and if/ else statements. 
 
 ## *Tests*
 #### Test 1:
@@ -27,6 +27,8 @@ Expect:
 
 ## *Known Bugs:*
 
+1. If user submits empty pizza ordering form, an incomplete statement is returned missing the appropriate variables.
+2. Multiple pizza ordering has yet to be implimented.
 
 ## *License*
 
