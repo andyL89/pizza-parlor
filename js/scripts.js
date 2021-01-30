@@ -1,5 +1,4 @@
-function OrderTotal(itemCount, totalPrice) {
-  this.itemCount = itemCount;
+function OrderTotal(totalPrice) {
   this.totalPrice = totalPrice;
 }
 
@@ -9,7 +8,7 @@ function Pizza(size, toppings, delivery) {
   this.delivery = delivery;
 }
 
-Pizza.prototype.pizzaOrdered = function() {
+Pizza.prototype.pizzaOrdered = function () {
   return this.size + " " + "pizza" + " " + "w/" + " " + this.toppings;
 }
 
@@ -57,22 +56,24 @@ $(document).ready(function () {
     let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
     let orderPrice = order(newPizza);
     $("#menu").hide();
+    $(".confirmation").show();
     $("#total").show().text("Your Total: $" + orderPrice);
     $("#current-order").show().text(newPizza.pizzaOrdered());
     $("#add-more").show();
 
-    let itemCount = 0;
     let totalPrice = orderPrice;
     let newOrder = new OrderTotal(itemCount, totalPrice);
     $("#btn-continue").click(function () {
       $("#add-more").hide();
       $("#home-buttons").show();
     });
-    $("")
-
+    
+    $("btn-custom").click(function () {
+      $(".order-custom").show();
+    })
 
     console.log(newPizza);
     console.log(newPizza.pizzaOrdered());
     console.log(newOrder);
-    });
+  });
 });
