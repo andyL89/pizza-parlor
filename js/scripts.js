@@ -1,7 +1,3 @@
-function OrderTotal(totalPrice) {
-  this.totalPrice = totalPrice;
-}
-
 function Pizza(size, toppings, delivery) {
   this.size = size;
   this.toppings = toppings;
@@ -61,16 +57,12 @@ $(document).ready(function () {
     $("#current-order").show().text(newPizza.pizzaOrdered());
     $("#btn-checkout").show();
 
-    let totalPrice = orderPrice;
-    let newOrder = new OrderTotal(totalPrice);
-    
-    console.log(newPizza);
-    console.log(newPizza.pizzaOrdered());
-    console.log(newOrder);
+    console.log(newPizza)
   });
-
+    
   $("#btn-checkout").click(function () {
     $(".confirmation").hide();
     $(".checkout").show();
   });
+
 });

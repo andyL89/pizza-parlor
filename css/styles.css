@@ -124,7 +124,7 @@ p.checkout {
   margin-top: 20px;
 }
 
-#btn, #btn2, #btn-checkout, #btn-custom {
+#btn, #btn2, #btn-checkout, #btn-custom, #btn-home {
   background-color: #009dffd9;
   border: none;
   border-radius: 50px;
@@ -134,11 +134,12 @@ p.checkout {
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
+  width: 200px;
   margin: 20px 2px;
   cursor: pointer;
 }
 
-#btn-custom:hover, #btn:hover, #btn2:hover, #btn-checkout:hover {
+#btn-custom:hover, #btn:hover, #btn2:hover, #btn-checkout:hover, #btn-home:hover {
   background-color: #7cdcff;
 }
 
