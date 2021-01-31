@@ -15,65 +15,32 @@
   <div class="bg"></div>
   <div class="bg-text">
     <h1>Andy's Extremely Thin-Crust Pizza</h1>
-    <h2 class="double">Crust so thin you'll say <strong><em>"Hey! Where's The Crust???"</em></strong></h2>
-    <form id="home-buttons">
-      <button id="btn-signature" type="click">Signature Pies</button>
-      <button id="btn-custom" type="click">Build Your Own</button>
-    </form>
-    <div class="order-signature">
-      <p>All signature pies are size large with no substitutions.</p>
-      <form id="menu-signature">
-        <div class="pies">
-          <label>
-            <input type="radio" name="pies" value="3cheese" required/>
-            Three Cheese.........$17
-          </label>
-          <br>
-          <label>
-            <input type="radio" name="pies" value="veggie" />
-            Veggie Supreme....$18
-          </label>
-          <br>
-          <label>
-            <input type="radio" name="pies" value="bbq-chicken" />
-            BBQ Chicken........$19
-          </label>
-          <br>
-          <label>
-            <input type="radio" name="pies" value="meat-lovers" />
-            Meat-Lovers..........$21
-          </label>
-        </div>
-        <button id="btn2" type="submit">Add To Order</button>
-      </form>
-    </div>
+    <h2 class="double">Crust <em>so</em> thin you'll say <strong><em>"Hey! Where's The Crust???"</em></strong></h2>
+    <button id="btn-custom" type="click">Build Your Own Pie</button>
     <div class="order-custom">
       <form id="menu-custom">
         <div class="form">
-          <p>Size</p>
+          <p class="underline">Size</p>
           <div class="size">
             <label>
-              <input type="radio" name="size" value="small" required/>
-              Small........$10
+              <input type="radio" name="size" value="small" required />
+              Small $10  
             </label>
-            <br>
             <label>
               <input type="radio" name="size" value="medium" />
-              Medium....$13
+              Medium $13  
             </label>
-            <br>
             <label>
               <input type="radio" name="size" value="large" />
-              Large........$15
+              Large $15  
             </label>
-            <br>
             <label>
               <input type="radio" name="size" value="colossal" />
-              Colossal...$18
+              Colossal $18
             </label>
           </div>
           <div class="toppings">
-            <p>Toppings (+ $2 each)</p>
+            <p class="underline">Toppings (+ $2 each)</p>
             <div class="meat">
               <input type="checkbox" name="toppings" value=" xtra-cheese"> Extra Cheese<br>
               <input type="checkbox" name="toppings" value=" pepperoni"> Pepperoni<br>
@@ -91,10 +58,9 @@
               <input type="checkbox" name="toppings" value=" pineapple"> Pineapple<br>
             </div>
           </div>
-
-          <p>Pick-up or Delivery</p>
+          <p class="underline">Pick-up or Delivery</p>
           <label>
-            <input type="radio" name="delivery" value="pick-up" required/>
+            <input type="radio" name="delivery" value="pick-up" required />
             Pick-Up
           </label>
           <br>
@@ -102,8 +68,6 @@
             <input type="radio" name="delivery" value="delivery" />
             Delivery (+$3 fee)
           </label>
-
-
         </div>
         <button id="btn" type="submit">Add To Order</button>
       </form>
@@ -111,10 +75,11 @@
     <div class="confirmation">
       <div id="total"></div>
       <div id="current-order"></div>
-      <div id="add-more">
-        <button id="btn-continue" type="click">Add Another Item</button>
-        <button id="btn-checkout" type="click">Check Out</button>
-      </div>
+      <button id="btn-checkout" type="click">Check Out</button>
+    </div>
+    <div class="checkout">
+      <h2>Seriously. <strong><em>"Where's The Crust?"</em></strong></h2>
+      <p class="checkout">Thank you for choosing Andy's Extremely Thin-Crust Pizza! Unfortunately we don't actually sell pizzas at this time. But if we did, here are some of the rave-reviews we'd imagine receiving:</p>
     </div>
   </div>
 </body>

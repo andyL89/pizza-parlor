@@ -39,16 +39,9 @@ let order = function (pizza) {
 $(document).ready(function () {
   $("#btn-custom").click(function (event) {
     event.preventDefault();
-    $("#home-buttons").hide();
-    $("h2").hide();
+    $("#btn-custom").hide();
+    $("h2.double").hide();
     $(".order-custom").show();
-  });
-
-  $("#btn-signature").click(function (event) {
-    event.preventDefault();
-    $("#home-buttons").hide();
-    $("h2").hide();
-    $(".order-signature").show();
   });
 
   $("#menu-custom").submit(function (event) {
@@ -66,23 +59,18 @@ $(document).ready(function () {
     $(".confirmation").show();
     $("#total").show().text("Your Total: $" + orderPrice);
     $("#current-order").show().text(newPizza.pizzaOrdered());
-    $("#add-more").show();
+    $("#btn-checkout").show();
 
     let totalPrice = orderPrice;
     let newOrder = new OrderTotal(totalPrice);
-    $("#btn-continue").click(function () {
-      $("#add-more").hide();
-      $("#home-buttons").show();
-    });
-
-    $("#btn-custom").click(function () {
-      $(".order-custom").show();
-    });
-
     
-
     console.log(newPizza);
     console.log(newPizza.pizzaOrdered());
     console.log(newOrder);
+  });
+
+  $("#btn-checkout").click(function () {
+    $(".confirmation").hide();
+    $(".checkout").show();
   });
 });
