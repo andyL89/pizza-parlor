@@ -14,7 +14,7 @@ Expect: Pizza(small, Extra Cheese).toEqual(small pizza w/ xtra cheese)
 ## *Setup Instructions:*
 
 1. Copy https://github.com/andyL89/pizza-parlor.git.
-2. Run git clone https://github.com/andyL89/pizza-parlor.git to add directory to your computer.
+2. Run `$ git clone https://github.com/andyL89/pizza-parlor.git` in the terminal to add directory to your computer.
 3. Navigate to the top level of the directory.
 4. Open index.html in your browser.
 
