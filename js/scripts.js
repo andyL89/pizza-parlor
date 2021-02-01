@@ -56,8 +56,6 @@ $(document).ready(function () {
     $("#total").show().text("Your Total: $" + orderPrice);
     $("#current-order").show().text(newPizza.pizzaOrdered());
     $("#btn-checkout").show();
-
-    console.log(newPizza)
   });
     
   $("#btn-checkout").click(function () {

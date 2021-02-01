@@ -7,28 +7,27 @@ Users can order a pizza by choosing the size, toppings, and delivery options and
 
 ## *Tests*
 #### Test 1:
-Describe: 
-Test: 
-Expect: 
-
+Describe: Pizza()
+Test: It will return the size of the pizza and toppings chosen when form is submitted.
+Expect: Pizza(small, Extra Cheese).toEqual(small pizza w/ xtra cheese)
 
 ## *Setup Instructions:*
 
 1. Copy https://github.com/andyL89/pizza-parlor.git.
 2. Run git clone https://github.com/andyL89/pizza-parlor.git to add directory to your computer.
-2. Navigate to the top level of the directory.
-3. Open index.html in your browser.
+3. Navigate to the top level of the directory.
+4. Open index.html in your browser.
 
 ## *Tecnologies Used:*
 * HTML
+* CSS
 * Java Script
 * JQuery
 * Bootstrap
 
 ## *Known Bugs:*
 
-1. If user submits empty pizza ordering form, an incomplete statement is returned missing the appropriate variables.
-2. Multiple pizza ordering has yet to be implimented.
+1. Multiple pizza ordering has yet to be implimented.
 
 ## *License*
 
