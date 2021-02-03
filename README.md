@@ -11,6 +11,11 @@ Describe: Pizza()
 Test: It will return the size of the pizza and toppings chosen when form is submitted.
 Expect: Pizza(small, Extra Cheese).toEqual(small pizza w/ xtra cheese)
 
+#### Test 2:
+Describe: order(newPizza)
+Test: It will return the price of the pizza depending on size, toppings, and delivery.
+Expect: order(small, Extra Cheese, delivery).toEqual($15)
+
 ## *Setup Instructions:*
 
 1. Copy https://github.com/andyL89/pizza-parlor.git.
