@@ -7,17 +7,17 @@ Users can choose a pizza's size, toppings, and delivery option and will receive 
 
 ## *Tests*
 #### Test 1:
-Describe: Pizza()
-Test: Creates pizza object for size, toppings, and delivery to be applied. 
-Code: let newPizza = new Pizza('medium;,['pepperoni']);
-Expect(newPizza).toEqual(Pizza{ size: 'medium', toppings: ['pepperoni']});
+* Describe: Pizza()
+* Test: Creates pizza object for size, toppings, and delivery to be applied. 
+* Code: let newPizza = new Pizza('medium;,['pepperoni']);
+* Expect(newPizza).toEqual(Pizza{ size: 'medium', toppings: ['pepperoni']});
 
 #### Test 2:
-Describe: Pizza.prototype.calculatePrice
-Test: It will calculate total cost of a pizza based on what size, toppings, and delivery option the user chooses.
-Code: let newPizza = new Pizza('medium',['pepperoni'], 'delivery');
-newPizza.calculatePrice(); 
-Expect(newPizza.price).toEqual(18);
+* Describe: Pizza.prototype.calculatePrice
+* Test: It will calculate total cost of a pizza based on what size, toppings, and delivery option the user chooses.
+* Code: let newPizza = new Pizza('medium',['pepperoni'], 'delivery');
+* newPizza.calculatePrice(); 
+* Expect(newPizza.price).toEqual(18);
 
 ## *Setup Instructions:*
 
