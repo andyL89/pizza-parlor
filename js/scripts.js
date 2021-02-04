@@ -4,32 +4,21 @@ function Pizza(size, toppings, delivery) {
   this.delivery = delivery;
 }
 
-Pizza.prototype.pizzaOrdered = function () {
-  return this.size + " " + "pizza" + " " + "w/" + " " + this.toppings;
-}
-
-let order = function (pizza) {
-  let size = pizza.size;
-  let toppings = pizza.toppings;
-  let delivery = pizza.delivery;
-  let orderPrice = 0;
-
-  if (size === "small") {
-    orderPrice = orderPrice + 10 + (toppings.length * 2);
-  } if (size === "medium") {
-    orderPrice = orderPrice + 13 + (toppings.length * 2);
-  } if (size === "large") {
-    orderPrice = orderPrice + 15 + (toppings.length * 2);
-  } if (size === "colossal") {
-    orderPrice = orderPrice + 18 + (toppings.length * 2);
-  } if (delivery === "delivery")
-    orderPrice = orderPrice + 3;
-  else {
-    orderPrice = orderPrice;
+Pizza.prototype.calculatePrice = function () {
+  if (this.size === "Small") {
+    this.price = 10 + this.toppings.length * 2;
+  } if (this.size === "Medium") {
+    this.price = 13 + this.toppings.length * 2;
+  } if (this.size === "Large") {
+    this.price = 15 + this.toppings.length * 2;
+  } if (this.size === "Colossal") {
+    this.price = 18 + this.toppings.length * 2;
+  } if (this.delivery === "delivery")
+    this.price = this.price + 3;
+    else {
+    this.price = this.price;
   }
-  return orderPrice;
 }
-
 
 //User Interface Logic
 $(document).ready(function () {
@@ -50,14 +39,14 @@ $(document).ready(function () {
     });
     const inputtedDelivery = $("input:radio[name=delivery]:checked").val();
     let newPizza = new Pizza(inputtedSize, chosenToppings, inputtedDelivery);
-    let orderPrice = order(newPizza);
+    newPizza.calculatePrice();
     $("#menu-custom").hide();
     $(".confirmation").show();
-    $("#total").show().text("Your Total: $" + orderPrice);
-    $("#current-order").show().text(newPizza.pizzaOrdered());
+    $("#total").show().text("Your Total: $" + newPizza.price);
+    $("#current-order").show().text(`${newPizza.size} pizza with ${newPizza.toppings} for ${newPizza.delivery}.`);
     $("#btn-checkout").show();
   });
-    
+
   $("#btn-checkout").click(function () {
     $(".confirmation").hide();
     $(".checkout").show();

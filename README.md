@@ -1,20 +1,23 @@
 ## Pizza Parlor
-#### Object Oriented JavaScript Project: A webpage that allows users to order a pizza.
+#### Object Oriented JavaScript Project: A pizza cost calculator.
 ***By Andrew Lawson © 2021***
 
 ## *Description:*
-Users can order a pizza by choosing the size, toppings, and delivery options and will receive a total price once submitted. This project's code uses concepts including object constructors, prototypes, forms, and if/ else statements. 
+Users can choose a pizza's size, toppings, and delivery option and will receive a total price once submitted. This project's code uses concepts including object constructors, prototype methods, forms, and if/ else statements. 
 
 ## *Tests*
 #### Test 1:
 Describe: Pizza()
-Test: It will return the size of the pizza and toppings chosen when form is submitted.
-Expect: Pizza(small, Extra Cheese).toEqual(small pizza w/ xtra cheese)
+Test: Creates pizza object for size, toppings, and delivery to be applied. 
+Code: let newPizza = new Pizza('medium;,['pepperoni']);
+Expect(newPizza).toEqual(Pizza{ size: 'medium', toppings: ['pepperoni']});
 
 #### Test 2:
-Describe: order(newPizza)
-Test: It will return the price of the pizza depending on size, toppings, and delivery.
-Expect: order(small, Extra Cheese, delivery).toEqual($15)
+Describe: Pizza.prototype.calculatePrice
+Test: It will calculate total cost of a pizza based on what size, toppings, and delivery option the user chooses.
+Code: let newPizza = new Pizza('medium',['pepperoni'], 'delivery');
+newPizza.calculatePrice(); 
+Expect(newPizza.price).toEqual(18);
 
 ## *Setup Instructions:*
 
